@@ -1,0 +1,40 @@
+{
+    "id": "TcKTTnHsYMahUPiN-YxkK",
+    "createdBy": "andre.dietrich@informatik.tu-freiberg.de",
+    "dateCreated": 1662980826456,
+    "name": "Cpp Programming",
+    "members": {
+        "teacher": ["teacher@mail.de"],
+        "student": []
+    },
+    "modules": [{
+        "url": "https://cross-lab-project.github.io/edrys_module-editor/index.html",
+        "config": {
+            "file": {
+                "main.cpp": "// C++ program to find the sum of two\n// numbers using function declared in\n// header file\n#include \"iostream\"\n\n// Including header file\n#include \"sum.h\"\nusing namespace std;\n\n// Driver Code\nint main()\n{\n\n    // Given two numbers\n    int a = 13, b = 22;\n\n    // Function declared in header\n    // file to find the sum\n    cout << \"Sum is: \"\n         << sumOfTwoNumbers(a, b)\n         << endl;\n}\n",
+                "sum.h": "// Function to find the sum of two\n// numbers passed\nint sumOfTwoNumbers(int a, int b)\n{\n    return (a + b);\n}\n"
+            },
+            "runCommand": "execute",
+            "language": "cpp",
+            "theme": "light"
+        },
+        "studentConfig": "",
+        "teacherConfig": "",
+        "stationConfig": "",
+        "width": "full",
+        "height": "tall"
+    },
+    {
+        "url": "https://cross-lab-project.github.io/edrys_module-pyxtermjs/index.html",
+        "config": "",
+        "studentConfig": "",
+        "teacherConfig": "",
+        "stationConfig": {
+            "server": "http://localhost:5000/pty",
+            "execute": "execute",
+            "script": "g++ main.cpp && ./a.out"
+        },
+        "width": "full",
+        "height": "tall"
+    }]
+}

@@ -1,0 +1,61 @@
+---
+id: TcKTTnHsYMahUPiN-YxkK
+createdBy: andre.dietrich@informatik.tu-freiberg.de
+dateCreated: 1662980826456
+name: Cpp Programming
+members:
+  teacher:
+  - teacher@mail.de
+  student: []
+modules:
+- url: https://cross-lab-project.github.io/edrys_module-editor/index.html
+  config:
+    file:
+      main.cpp: |
+        // C++ program to find the sum of two
+        // numbers using function declared in
+        // header file
+        #include "iostream"
+
+        // Including header file
+        #include "sum.h"
+        using namespace std;
+
+        // Driver Code
+        int main()
+        {
+
+            // Given two numbers
+            int a = 13, b = 22;
+
+            // Function declared in header
+            // file to find the sum
+            cout << "Sum is: "
+                 << sumOfTwoNumbers(a, b)
+                 << endl;
+        }
+      sum.h: |
+        // Function to find the sum of two
+        // numbers passed
+        int sumOfTwoNumbers(int a, int b)
+        {
+            return (a + b);
+        }
+    runCommand: execute
+    language: cpp
+    theme: light
+  studentConfig: ''
+  teacherConfig: ''
+  stationConfig: ''
+  width: full
+  height: tall
+- url: https://cross-lab-project.github.io/edrys_module-pyxtermjs/index.html
+  config: ''
+  studentConfig: ''
+  teacherConfig: ''
+  stationConfig:
+    server: http://localhost:5000/pty
+    execute: execute
+    script: g++ main.cpp && ./a.out
+  width: full
+  height: tall
