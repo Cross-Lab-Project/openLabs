@@ -57,5 +57,8 @@ modules:
     server: http://localhost:5000/pty
     execute: execute
     script: g++ main.cpp && ./a.out
+    enable:
+      teacher: true
+      student: true
   width: full
   height: tall
