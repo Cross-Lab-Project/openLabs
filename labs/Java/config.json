@@ -1,0 +1,47 @@
+{
+    "id": "RGcuinHsYMahUPiN-YxkK",
+    "createdBy": "andre.dietrich@informatik.tu-freiberg.de",
+    "dateCreated": 1662980926456,
+    "name": "Java Programming",
+    "members": {
+        "teacher": [
+            "teacher@mail.de"
+        ],
+        "student": []
+    },
+    "modules": [
+        {
+            "url": "https://cross-lab-project.github.io/edrys_module-editor/index.html",
+            "config": {
+                "file": {
+                    "HelloWorld.java": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello world!\");\n    }\n}\n"
+                },
+                "runCommand": "execute",
+                "language": "cpp",
+                "theme": "light"
+            },
+            "studentConfig": "",
+            "teacherConfig": "",
+            "stationConfig": "",
+            "width": "full",
+            "height": "tall"
+        },
+        {
+            "url": "https://cross-lab-project.github.io/edrys_module-pyxtermjs/index.html",
+            "config": "",
+            "studentConfig": "",
+            "teacherConfig": "",
+            "stationConfig": {
+                "server": "http://localhost:5000/pty",
+                "execute": "execute",
+                "script": "javac HelloWorld.java && java HelloWorld",
+                "enable": {
+                    "teacher": true,
+                    "student": true
+                }
+            },
+            "width": "full",
+            "height": "tall"
+        }
+    ]
+}
