@@ -18,7 +18,7 @@ modules:
             }
         }
     runCommand: execute
-    language: cpp
+    language: java
     theme: light
   studentConfig: ''
   teacherConfig: ''

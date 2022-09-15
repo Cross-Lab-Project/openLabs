@@ -17,7 +17,7 @@
                     "HelloWorld.java": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello world!\");\n    }\n}\n"
                 },
                 "runCommand": "execute",
-                "language": "cpp",
+                "language": "java",
                 "theme": "light"
             },
             "studentConfig": "",
