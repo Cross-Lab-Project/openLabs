@@ -1,0 +1,47 @@
+{
+    "id": "RGTPinHsYMahUPiN-YxkK",
+    "createdBy": "andre.dietrich@informatik.tu-freiberg.de",
+    "dateCreated": 1662983826456,
+    "name": "R Programming",
+    "members": {
+        "teacher": [
+            "teacher@mail.de"
+        ],
+        "student": []
+    },
+    "modules": [
+        {
+            "url": "https://cross-lab-project.github.io/edrys_module-editor/index.html",
+            "config": {
+                "file": {
+                    "example.R": "set.seed(549298)                       # Create example data\ndata <- data.frame(x = rnorm(500, 1, 3),\n                   group = LETTERS[1:5])\nhead(data)\n"
+                },
+                "runCommand": "execute",
+                "language": "R",
+                "theme": "light"
+            },
+            "studentConfig": "",
+            "teacherConfig": "",
+            "stationConfig": "",
+            "width": "full",
+            "height": "tall"
+        },
+        {
+            "url": "https://cross-lab-project.github.io/edrys_module-pyxtermjs/index.html",
+            "config": "",
+            "studentConfig": "",
+            "teacherConfig": "",
+            "stationConfig": {
+                "server": "http://localhost:5000/pty",
+                "execute": "execute",
+                "script": "Rscript example.R",
+                "enable": {
+                    "teacher": true,
+                    "student": true
+                }
+            },
+            "width": "full",
+            "height": "tall"
+        }
+    ]
+}
