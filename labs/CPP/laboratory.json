@@ -30,7 +30,7 @@
         "studentConfig": "",
         "teacherConfig": "",
         "stationConfig": {
-            "server": "http://localhost:5000/pty",
+            "server": "http://localhost:5010/pty",
             "execute": "execute",
             "script": "g++ main.cpp && ./a.out",
             "enable": {
