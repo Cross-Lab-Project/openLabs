@@ -6,7 +6,7 @@ USER root
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y mono-complete mono-mcs
 
 # get back to the default appuser
-USER appuser
+USER ${user}
 
 EXPOSE 5000
 

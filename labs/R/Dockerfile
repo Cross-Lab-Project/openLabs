@@ -29,7 +29,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y r-base r-base-dev r-recomm
     r-cran-zoo
 
 # get back to the default appuser
-USER appuser
+USER ${user}
 
 EXPOSE 5000
 
