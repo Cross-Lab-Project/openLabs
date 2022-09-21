@@ -1,0 +1,80 @@
+---
+id: ilmDo5EiOgaewHj1i0mzc
+createdBy: andre.dietrich@informatik.tu-freiberg.de
+dateCreated: 1663662557885
+name: Arduino Lab
+members:
+  teacher:
+    - teacher@uni.de
+  student: []
+modules:
+  - url: 'https://edrys-org.github.io/module-video-chat/'
+    config: ''
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig: ''
+    width: full
+    height: tall
+  - url: 'https://cross-lab-project.github.io/edrys_module-editor/index.html'
+    config:
+      file:
+        Hello.ino: |
+          void setup() {
+            pinMode(LED_BUILTIN, OUTPUT);
+            Serial.begin(9600);
+            Serial.println("Hello World");
+          }
+          
+          static uint8_t count=0;
+          
+          void blink(uint8_t on){
+            digitalWrite(LED_BUILTIN, HIGH);
+            delay(on * 100);
+            digitalWrite(LED_BUILTIN, LOW);
+            delay(300);
+          }
+          
+          void loop() {
+            Serial.print("count:");
+            Serial.println(count++);
+            
+            blink(3);
+            blink(1);
+            blink(3);
+            
+            digitalWrite(LED_BUILTIN, LOW);
+            delay(1000);
+          }
+
+      runCommand: execute
+      language: cpp
+      theme: light
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig: ''
+    width: full
+    height: tall
+  - url: 'https://cross-lab-project.github.io/edrys_module-pyxtermjs/index.html'
+    config: ''
+    studentConfig: ''
+    teacherConfig: ''
+    stationConfig:
+      server: 'http://localhost:5000/pty'
+      execute: execute
+      script: |
+        arduino-cli sketch new Hello
+        olddir=$(pwd)
+        
+        mv Hello.ino Hello
+        cd Hello
+        
+        arduino-cli board attach -p /dev/ttyACM0
+        arduino-cli compile
+        arduino-cli upload
+        arduino-cli monitor -p /dev/ttyACM0
+        cd $olddir
+      enable:
+        teacher: true
+        student: true
+    width: full
+    height: tall

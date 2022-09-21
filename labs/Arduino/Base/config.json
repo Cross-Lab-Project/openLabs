@@ -1,0 +1,56 @@
+{
+    "id": "ilmDo5EiOgaewHj1i0mzc",
+    "createdBy": "andre.dietrich@informatik.tu-freiberg.de",
+    "dateCreated": 1663662557885,
+    "name": "Arduino Lab",
+    "members": {
+      "teacher": [
+        "teacher@uni.de"
+      ],
+      "student": []
+    },
+    "modules": [
+      {
+        "url": "https://edrys-org.github.io/module-video-chat/",
+        "config": "",
+        "studentConfig": "",
+        "teacherConfig": "",
+        "stationConfig": "",
+        "width": "full",
+        "height": "tall"
+      },
+      {
+        "url": "https://cross-lab-project.github.io/edrys_module-editor/index.html",
+        "config": {
+          "file": {
+            "Hello.ino": "void setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n  Serial.begin(9600);\n  Serial.println(\"Hello World\");\n}\n\nstatic uint8_t count=0;\n\nvoid blink(uint8_t on){\n  digitalWrite(LED_BUILTIN, HIGH);\n  delay(on * 100);\n  digitalWrite(LED_BUILTIN, LOW);\n  delay(300);\n}\n\nvoid loop() {\n  Serial.print(\"count:\");\n  Serial.println(count++);\n  \n  blink(3);\n  blink(1);\n  blink(3);\n  \n  digitalWrite(LED_BUILTIN, LOW);\n  delay(1000);\n}\n"
+          },
+          "runCommand": "execute",
+          "language": "cpp",
+          "theme": "light"
+        },
+        "studentConfig": "",
+        "teacherConfig": "",
+        "stationConfig": "",
+        "width": "full",
+        "height": "tall"
+      },
+      {
+        "url": "https://cross-lab-project.github.io/edrys_module-pyxtermjs/index.html",
+        "config": "",
+        "studentConfig": "",
+        "teacherConfig": "",
+        "stationConfig": {
+          "server": "http://localhost:5000/pty",
+          "execute": "execute",
+          "script": "arduino-cli sketch new Hello\nolddir=$(pwd)\n\nmv Hello.ino Hello\ncd Hello\n\narduino-cli board attach -p /dev/ttyACM0\narduino-cli compile\narduino-cli upload\narduino-cli monitor -p /dev/ttyACM0\ncd $olddir\n",
+          "enable": {
+            "teacher": true,
+            "student": true
+          }
+        },
+        "width": "full",
+        "height": "tall"
+      }
+    ]
+  }
