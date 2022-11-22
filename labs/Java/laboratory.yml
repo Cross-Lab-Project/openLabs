@@ -30,7 +30,7 @@ modules:
   studentConfig: ''
   teacherConfig: ''
   stationConfig:
-    server: http://localhost:5000/pty
+    server: http://localhost:5070/pty
     execute: execute
     script: javac HelloWorld.java && java HelloWorld
     enable:

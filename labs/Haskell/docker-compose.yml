@@ -2,7 +2,9 @@ version: '3'
 services:
   pyxtermjs:
     build: .
+    image: crosslab/edrys_haskell_lab
+    container_name: edrys_haskell_lab
     ports:
-      - "5000:5000"
+      - "5060:5000"
     environment:
       - PYXTERM_CMD=zsh

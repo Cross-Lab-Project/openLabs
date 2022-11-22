@@ -32,7 +32,7 @@
             "studentConfig": "",
             "teacherConfig": "",
             "stationConfig": {
-                "server": "http://localhost:5000/pty",
+                "server": "http://localhost:5120/pty",
                 "execute": "execute",
                 "script": "Rscript example.R",
                 "enable": {

@@ -1,8 +1,10 @@
 version: '3'
 services:
   pyxtermjs:
-    image: crosslab/edrys_pyxtermjs:latest
+    build: .
+    image: crosslab/edrys_cpp_lab
+    container_name: edrys_cpp_lab
     ports:
-      - "5010:5000"
+      - "5030:5000"
     environment:
       - PYXTERM_CMD=zsh

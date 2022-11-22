@@ -25,7 +25,3 @@ RUN arduino-cli core install arduino:avr
 # Switch to user we must not set group to make the configuration done above apply
 # !! if ${user} is not setup correctly the next line might result in group being root !!
 USER ${user}
-
-EXPOSE 5000
-
-ENTRYPOINT python3 -m pyxtermjs --cors True --host 0.0.0.0 --command zsh
