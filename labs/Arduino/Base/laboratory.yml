@@ -8,11 +8,16 @@ members:
     - teacher@uni.de
   student: []
 modules:
-  - url: 'https://edrys-org.github.io/module-video-chat/'
-    config: ''
-    studentConfig: ''
-    teacherConfig: ''
-    stationConfig: ''
+  - url: https://cross-lab-project.github.io/module-video-chat-jitsi/
+    config:
+      instance: https://meet.jit.si
+      config: '&config.startWithAudioMuted=true'
+    studentConfig:
+      config: '&config.startWithVideoMuted=true&stud'
+    teacherConfig:
+      config: '&config.startWithVideoMuted=true&teach'
+    stationConfig:
+      config: '&config.startWithVideoMuted=false&station'
     width: full
     height: tall
   - url: 'https://cross-lab-project.github.io/edrys_module-editor/index.html'
