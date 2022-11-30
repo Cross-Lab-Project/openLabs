@@ -1,0 +1,10 @@
+# for USB devices
+
+KERNEL!="ttyUSB[0-9]*|ttyACM[0-9]*", GOTO="docker-chardev_end"
+
+ACTION=="remove", SUBSYSTEM=="tty", RUN+="/opt/bin/docker-chardev.sh"
+ACTION=="add", SUBSYSTEM=="tty", RUN+="/opt/bin/docker-chardev.sh"
+
+#SUBSYSTEMS=="usb-serial", ENV{.ID_PORT}="$attr{port_number}"
+
+LABEL="docker-chardev_end"

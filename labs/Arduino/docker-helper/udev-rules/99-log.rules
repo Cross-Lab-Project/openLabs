@@ -1,0 +1,11 @@
+
+# only for USB devices
+
+KERNEL!="ttyUSB[0-9]*|ttyACM[0-9]*", GOTO="write_log_end"
+
+ACTION=="remove", SUBSYSTEM=="tty", RUN+="/opt/bin/write_env.sh"
+ACTION=="add", SUBSYSTEM=="tty", RUN+="/opt/bin/write_env.sh"
+
+#SUBSYSTEMS=="usb-serial", ENV{.ID_PORT}="$attr{port_number}"
+
+LABEL="write_log_end"

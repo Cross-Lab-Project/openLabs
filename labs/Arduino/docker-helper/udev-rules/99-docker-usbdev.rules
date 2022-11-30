@@ -1,0 +1,8 @@
+# for USB devices
+
+TAG!="uaccess", GOTO="docker-usbdev_end"
+
+ACTION=="remove", SUBSYSTEM=="usb", RUN+="/opt/bin/docker-usbdev.sh"
+ACTION=="add", SUBSYSTEM=="usb", RUN+="/opt/bin/docker-usbdev.sh"
+
+LABEL="docker-usbdev_end"
