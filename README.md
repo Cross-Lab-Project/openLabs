@@ -18,3 +18,8 @@ All laboratories are are defined within the `laboratory.json`, which needs to be
 - [Python](labs/Python/README.md)
 - [R](labs/R/README.md)
 - [Rust](labs/Rust/README.md)
+
+
+import the demo for Markdown via:
+
+https://raw.githubusercontent.com/Cross-Lab-Project/openLabs/main/markdown.yml
