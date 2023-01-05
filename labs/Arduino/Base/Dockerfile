@@ -1,5 +1,5 @@
-#FROM crosslab/edrys_pyxtermjs:latest
-FROM pyxtermjs
+#FROM crosslab/edrys_pyxtermjs:latest    # x86 from dockerhub
+FROM pyxtermjs                           # Local pyxtermjs (ARM) 
 
 #ensure we are root for software install
 USER root
