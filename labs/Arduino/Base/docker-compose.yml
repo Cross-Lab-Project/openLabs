@@ -1,4 +1,7 @@
-version: '3'
+version: '2.4'  # 2.4 since device_cgroup_rules support was removed in some
+                # newer versions of the docker-compose-yaml depending on the version
+                # of docker compose and readded later
+                # see https://github.com/docker/compose/issues/9059
 services:
   pyxtermjs:
     build: .
@@ -10,3 +13,6 @@ services:
       - PYXTERM_CMD=zsh
     devices:
       - /dev/ttyACM0
+    device_cgroup_rules:
+      - 'c 166:* rmw'
+      - 'c 189:* rmw'
